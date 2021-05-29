@@ -1,10 +1,5 @@
 
-
-
-
-
-// let options = ['rock','paper','scissors']
-
+// Rock Paper Scissors
 
 function computerPlay(){
 
@@ -21,27 +16,61 @@ else if (computerOption === 2){
 }
 }
 
-    
-
-
-
+const playerSelection = '';
+const computerSelection = computerPlay();
+console.log(game())
 
 function playRound(playerSelection, computerSelection)
  {
-// How can I compare two strings to determine the winner?
+playerSelection = playerSelection.toLowerCase()   
+
 if (playerSelection == 'scissors' && computerSelection == 'rock'){
-    return 'Rock beats Scissors You loose!';
+    return 'Rock beats Scissors You Lose!';
 }
-else if (playerSelection == 'rock' && computerSelection == 'scissors'){
-    return 'Rock beats Scissors You Win!!';
-
-}
+else if (playerSelection == 'scissors' && computerSelection == 'paper'){
+    return 'Scissors Beats Papers You Win!!!';
  }
+ else if (playerSelection == 'scissors' && computerSelection == 'scissors'){
+    return 'Tie try again';
+ }
+ else if (playerSelection == 'rock' && computerSelection == 'paper'){
+    return 'Paper Beats Rock You Lose!';
+ }
+ else if (playerSelection == 'rock' && computerSelection == 'scissors'){
+    return 'Rock beats Scissors You Win!!!';
+ }
+ else if (playerSelection == 'rock' && computerSelection == 'rock'){
+    return 'Tie try again';
+ }
+ 
+ else if (playerSelection == 'paper' && computerSelection == 'rock'){
+    return 'Paper Beats Rock You Win!!';   
+}
+else if (playerSelection == 'paper' && computerSelection == 'scissors'){
+    return 'Scissors Beats Papers You Lose!';   
+}
+else if (playerSelection == 'paper' && computerSelection == 'paper'){
+    return 'Tie try again';   
+
+}
+}
+function game(){
+ 
+    for (i = 0; i < 5; i++) {
+    console.log(playRound(prompt( 'Choose Your Warrior'), computerPlay()));
+    }   
+}
 
 
- const playerSelection = "scissors";
-const computerSelection = computerPlay();
-console.log(playRound('rock', 'scissors'))
+
+
+
+ 
+
+
+
+
+
 
 
 
@@ -77,6 +106,32 @@ console.log(playRound('rock', 'scissors'))
 //     console.log('Tie')
 // }
 
+ 
+//  switch (playerSelection,computerSelection) {
+     
 
+//     case 'rock' == 'scissors' :
+//         return 'Rock Beats Scissors You Win!';
+//     break;
+//     case 'rock' == 'paper' :
+//         return 'Paper Beats Rock You Loose!';
+//     break;
+//     case 'paper' == 'scissors' :
+//         return 'Scissors Beats Paper You Loose!';
+//     break;
+//     case 'paper' == 'rock' :
+//         return 'Paper Beats Rock You Win!!';
+//     break;
+//     case 'scissors' == 'paper' :
+//         return 'Scissors Beats Paper You Win!';
+//     break;
+//     case 'scissors' == 'rock' :
+//         return 'Rock Beats Scissors You Loose!';
+//     break;
+//     case 'scissors' == 'scissors' :
+//     case 'paper' == 'paper' :
+//     case 'rock' == 'rock' :
+//         return 'Rock Beats Scissors You Loose!';
+//     break;
 
-// 
+//  }
