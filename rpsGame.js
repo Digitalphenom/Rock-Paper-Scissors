@@ -16,122 +16,65 @@ else if (computerOption === 2){
 }
 }
 
+let p1Score = 0
+let cpuScore = 0
 const playerSelection = '';
 const computerSelection = computerPlay();
 console.log(game())
 
+
 function playRound(playerSelection, computerSelection)
  {
+  
 playerSelection = playerSelection.toLowerCase()   
 
 if (playerSelection == 'scissors' && computerSelection == 'rock'){
-    return 'Rock beats Scissors You Lose!';
+    return `Rock beats Scissors You Lose! PlayerOne ${p1Score} Computer ${++cpuScore}`;
 }
 else if (playerSelection == 'scissors' && computerSelection == 'paper'){
-    return 'Scissors Beats Papers You Win!!!';
+    return `Scissors Beats Papers You Win!!! PlayerOne ${++p1Score} Computer ${cpuScore}`;
  }
  else if (playerSelection == 'scissors' && computerSelection == 'scissors'){
     return 'Tie try again';
  }
  else if (playerSelection == 'rock' && computerSelection == 'paper'){
-    return 'Paper Beats Rock You Lose!';
+    return `Paper Beats Rock You Lose! PlayerOne ${p1Score} Computer ${++cpuScore}`;
  }
  else if (playerSelection == 'rock' && computerSelection == 'scissors'){
-    return 'Rock beats Scissors You Win!!!';
+    return `Rock beats Scissors You Win!!! Player One ${++p1Score} Computer ${cpuScore}`;
  }
  else if (playerSelection == 'rock' && computerSelection == 'rock'){
     return 'Tie try again';
  }
  
  else if (playerSelection == 'paper' && computerSelection == 'rock'){
-    return 'Paper Beats Rock You Win!!';   
+    return `Paper Beats Rock You Win!! PlayerOne ${++p1Score} Computer ${cpuScore}`;   
 }
 else if (playerSelection == 'paper' && computerSelection == 'scissors'){
-    return 'Scissors Beats Papers You Lose!';   
+    return `Scissors Beats Papers You Lose! PlayerOne ${p1Score} Computer ${++cpuScore}`;   
 }
 else if (playerSelection == 'paper' && computerSelection == 'paper'){
     return 'Tie try again';   
 
 }
 }
+
 function game(){
  
     for (i = 0; i < 5; i++) {
-    console.log(playRound(prompt( 'Choose Your Warrior'), computerPlay()));
-    }   
+    console.log(playRound(prompt( 'Choose Your Warrior'), computerPlay()))
+    }
+  
+}
+if (p1Score >= 3) {
+    console.log('Congratulations You Won The Game!!')
 }
 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-// function playRound(playerSelection, computerSelection)
-//     let rock = 1
-//     let paper = 2;
-//     let scissors = 3;
-    
-//     if (rock < paper){
-//         console.log("You loose! Paper beats Rock")
-//     }
-//     else if (paper > rock){
-//         console.log("You Win!! Paper beats Rock")
-//     }
-//     else if (rock == rock){
-//         console.log("Tie Pick again")
-//     }
-
-
-
-// if ('rock' 'paper') {
+else if (cpuScore >= 3){
+console.log('Sorry you loose, try again?')
+}
+else if (cpuScore == p1Score) {
+    console.log("Its a tie try again?")
+}
    
-//     return 'you loose';
-// }
-// else if (rock > paper) {
-//     console.log('you Win')
-// }
-// else if (rock == rock) {
-//     console.log('Tie')
-// }
-// else if (paper == paper) {
-//     console.log('Tie')
-// }
 
- 
-//  switch (playerSelection,computerSelection) {
-     
-
-//     case 'rock' == 'scissors' :
-//         return 'Rock Beats Scissors You Win!';
-//     break;
-//     case 'rock' == 'paper' :
-//         return 'Paper Beats Rock You Loose!';
-//     break;
-//     case 'paper' == 'scissors' :
-//         return 'Scissors Beats Paper You Loose!';
-//     break;
-//     case 'paper' == 'rock' :
-//         return 'Paper Beats Rock You Win!!';
-//     break;
-//     case 'scissors' == 'paper' :
-//         return 'Scissors Beats Paper You Win!';
-//     break;
-//     case 'scissors' == 'rock' :
-//         return 'Rock Beats Scissors You Loose!';
-//     break;
-//     case 'scissors' == 'scissors' :
-//     case 'paper' == 'paper' :
-//     case 'rock' == 'rock' :
-//         return 'Rock Beats Scissors You Loose!';
-//     break;
-
-//  }
